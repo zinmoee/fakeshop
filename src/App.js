@@ -10,8 +10,8 @@ function App() {
       <Router>
         <Header />
         <Routes>
-          <Route path="/" exact component={ProductListing} />
-          <Route path="/products/:productId" exact component={ProductDetail} />
+          <Route path="/" element={<ProductListing />} />
+          <Route path="/products/:productId" element={<ProductDetail />} />
           <Route>404 Not Found</Route>
         </Routes>
       </Router>

@@ -1,9 +1,21 @@
 import React from "react";
 
-const ProductCard = () => {
+const ProductCard = ({ product }) => {
+  console.log("here");
   return (
-    <div>
-      <h1>ProductCard</h1>
+    <div className="four columns wide">
+      <div className="ui link cards">
+        <div className="card">
+          <div className="image">
+            <img src={product.image} alt={product.title} />
+          </div>
+          <div className="content">
+            <div className="header">{product.header}</div>
+            <div className="meta price">$ {product.price}</div>
+            <div className="meta">{product.category}</div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
