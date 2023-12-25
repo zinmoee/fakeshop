@@ -5,7 +5,7 @@ import { setProducts } from "../../redux/actions/productActions";
 import ProductCard from "./Card";
 
 const ProductListing = () => {
-  const products = useSelector((state) => state.allProducts.products);
+  const products = useSelector((state) => state.productReducer.products);
   const dispatch = useDispatch();
 
   const fetchProducts = async () => {
@@ -25,7 +25,7 @@ const ProductListing = () => {
     return <ProductCard product={product} key={product.id} />;
   });
 
-  return <div className="ui grid container">{renderList}</div>;
+  return <div className="ui link cards container">{renderList}</div>;
 };
 
 export default ProductListing;
